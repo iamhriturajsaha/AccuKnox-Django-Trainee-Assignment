@@ -1,0 +1,11 @@
+REQUIREMENTS -
+
+1) Must be initialized with length and width (both integers).
+
+2) Must be iterable.
+
+3) Iteration must yield:
+
+   {'length': <VALUE_OF_LENGTH>}
+
+   {'width': <VALUE_OF_WIDTH>}
