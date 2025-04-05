@@ -13,4 +13,3 @@ Steps :-
 3) We'll also log the time just before and after the .save() call in the view.
 
 4) The timestamps will show that the signal runs in between — confirming synchronous execution.
-
