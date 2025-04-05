@@ -9,7 +9,7 @@ def create_book_view(request):
     try:
         with transaction.atomic():
             Book.objects.create(title="Transactional Signal Test")
-            raise Exception("💥 Simulated exception to trigger rollback")
+            raise Exception("Simulated exception to trigger rollback")
     except Exception as e:
-        logger.warning(f"❌ Exception occurred: {e}")
+        logger.warning(f"Exception occurred: {e}")
     return HttpResponse("Done")
