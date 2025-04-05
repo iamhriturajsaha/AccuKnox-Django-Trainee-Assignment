@@ -15,6 +15,3 @@ class LogEntry(models.Model):
 def book_saved_handler(sender, instance, created, **kwargs):
     LogEntry.objects.create(message=f"Book created: {instance.title}")
     logger.warning("LogEntry created inside signal.")
-
-
-
