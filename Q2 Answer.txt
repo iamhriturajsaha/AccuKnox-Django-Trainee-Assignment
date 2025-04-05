@@ -9,4 +9,3 @@ Steps :-
 1) Log the current thread ID from both the view (caller) and the signal.
 
 2) If both thread IDs match, the signal runs in the same thread.
-
