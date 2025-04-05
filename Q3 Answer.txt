@@ -1,0 +1,15 @@
+QUESTION 3
+
+Question 3: By default do Django signals run in the same database transaction as the caller? Please support your answer with a code snippet that conclusively proves your stance. The code does not need to be elegant and production ready, we just need to understand your logic.
+
+Answer :- Yes, by default, Django signals run in the same database transaction as the caller. This means if the signal performs database operations and the caller's transaction fails (or rolls back), the signal's DB changes will also be rolled back.
+
+Steps :- 
+
+1) Use a post_save signal that creates another DB record.
+
+2) Intentionally raise an exception after the save in the view.
+
+3) Check whether the object created inside the signal persists in the database.
+
+If it doesn’t persist, that confirms it was part of the same transaction — and rolled back together.
