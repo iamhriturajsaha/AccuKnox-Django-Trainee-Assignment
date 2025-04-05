@@ -12,4 +12,3 @@ class Book(models.Model):
 @receiver(post_save, sender=Book)
 def book_saved_handler(sender, instance, created, **kwargs):
     logger.warning(f"Signal thread ID: {threading.get_ident()}")
-
