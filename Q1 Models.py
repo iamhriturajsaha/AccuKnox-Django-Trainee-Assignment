@@ -11,6 +11,6 @@ class Book(models.Model):
 
 @receiver(post_save, sender=Book)
 def book_saved_handler(sender, instance, created, **kwargs):
-    logger.warning("🔁 Signal started")
+    logger.warning("Signal started")
     time.sleep(5)  # Simulate a slow signal
-    logger.warning("✅ Signal completed")
+    logger.warning("Signal completed")
